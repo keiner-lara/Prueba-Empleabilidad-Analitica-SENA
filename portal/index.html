@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Keiner Lara | Portal Analítico — Ventas LATAM</title>
+  <meta name="description"
+    content="Portal de análisis de ventas LATAM — Prueba de Empleabilidad SENA 2026. KPIs, Top 5 productos, insights estratégicos y dashboards de Power BI.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="bg-glow"></div>
+
+  <header class="hero-section text-center">
+    <div class="container">
+      <div class="badge-exotic mb-3">KEINER LARA • DATA ANALYTICS • SENA 2026</div>
+      <h1 class="main-title">Insights &amp; Storytelling</h1>
+      <p class="subtitle">Transforming raw LATAM sales data into strategic intelligence — 1,951,391 records cleaned</p>
+    </div>
+  </header>
+
+  <main class="container main-content">
+
+    <!-- ── SECCIÓN 1: KPIs ─────────────────────────────────────────────────── -->
+    <section class="row g-4 mb-5 pb-4" id="kpis">
+      <div class="col-6 col-lg-3">
+        <div class="kpi-card-exotic border-blue">
+          <i class="bi bi-lightning-charge-fill icon-blue"></i>
+          <h3 class="fw-bold mb-0 mt-2">$33.83B</h3>
+          <span class="label-kpi">Total Sales</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="kpi-card-exotic border-green">
+          <i class="bi bi-ticket-detailed-fill icon-green"></i>
+          <h3 class="fw-bold mb-0 mt-2">$17.34K</h3>
+          <span class="label-kpi">Avg Ticket</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="kpi-card-exotic border-purple">
+          <i class="bi bi-stack icon-purple"></i>
+          <h3 class="fw-bold mb-0 mt-2">10.73M</h3>
+          <span class="label-kpi">Units Sold</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="kpi-card-exotic border-orange">
+          <i class="bi bi-geo-fill icon-orange"></i>
+          <h3 class="fw-bold mb-0 mt-2">3</h3>
+          <span class="label-kpi">LATAM Hubs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECCIÓN 2: TOP 5 PRODUCTOS ────────────────────────────────────────── -->
+    <section class="mb-5" id="top5">
+      <h2 class="exotic-heading mb-3"><span class="text-gradient">Top 5 Productos (SQL Query)</span></h2>
+      <div class="row g-4 align-items-center">
+
+        <div class="col-md-5">
+          <div class="table-responsive">
+            <table class="table data-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Producto</th>
+                  <th>Total Ventas</th>
+                  <th>Categoría</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Té</td>
+                  <td>$2.83B</td>
+                  <td>Bebida</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Galletas</td>
+                  <td>$2.83B</td>
+                  <td>Snack</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Yogurt</td>
+                  <td>$2.83B</td>
+                  <td>Lácteo</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Gaseosa</td>
+                  <td>$2.82B</td>
+                  <td>Bebida</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Mantequilla</td>
+                  <td>$2.82B</td>
+                  <td>Lácteo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-muted" style="font-size:0.72rem;margin-top:6px;">
+            Fuente: <code>SELECT producto, SUM(total) FROM fact_ventas GROUP BY producto ORDER BY 2 DESC LIMIT 5</code>
+          </p>
+        </div>
+
+        <div class="col-md-7">
+          <div class="chart-box">
+            <canvas id="top5Chart" height="250"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SECCIÓN 3: STRATEGIC FINDINGS ─────────────────────────────────────── -->
+    <section class="mb-5 pt-4" id="insights">
+      <h2 class="exotic-heading"><span class="text-gradient">Strategic Business Findings</span></h2>
+
+      <div class="row g-4 mt-2">
+        <div class="col-12">
+          <div class="insight-glass">
+            <div class="insight-header-bar bar-blue"></div>
+            <div class="p-4">
+              <h5 class="fw-bold text-white mb-3">1. Strategic Focus on Corporate and Government Segments</h5>
+              <div class="row gy-3">
+                <div class="col-md-4 text-light-gray"><strong class="text-blue">Evidence:</strong> Wholesale,
+                  Government, and Corporate segments drive nearly $8.4B each. "Unknown" segments are negligible.</div>
+                <div class="col-md-4 text-light-gray border-md-start"><strong class="text-blue">Impact:</strong> High
+                  dependence on institutional B2B contracts. Retail is a secondary driver for stability.</div>
+                <div class="col-md-4 text-light-gray border-md-start"><strong class="text-blue">Recommendation:</strong>
+                  Launch a B2B Key Account Management (KAM) program with customized credit terms.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="insight-glass">
+            <div class="insight-header-bar bar-green"></div>
+            <div class="p-4">
+              <h5 class="fw-bold text-white mb-3">2. Market Preference and Inventory Optimization</h5>
+              <div class="row gy-3">
+                <div class="col-md-4 text-light-gray"><strong class="text-green">Evidence:</strong> Tea and Cookies
+                  lead, but Beverages and Dairy maintain identical shares (~$5.6B each).</div>
+                <div class="col-md-4 text-light-gray border-md-start"><strong class="text-green">Impact:</strong>
+                  Diversified risk profile due to balanced demand, but complex SKU management.</div>
+                <div class="col-md-4 text-light-gray border-md-start"><strong
+                    class="text-green">Recommendation:</strong> Implement Agile Inventory and cross-sell bundles (e.g.,
+                  Tea + Snacks) to increase ticket.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="insight-glass">
+            <div class="insight-header-bar bar-purple"></div>
+            <div class="p-4">
+              <h5 class="fw-bold text-white mb-3">3. Regional Expansion and Logistics Efficiency</h5>
+              <div class="row gy-3">
+                <div class="col-md-4 text-light-gray"><strong class="text-purple">Evidence:</strong> Stable performance
+                  across Brazil, Colombia, and Mexico without regional outliers.</div>
+                <div class="col-md-4 text-light-gray border-md-start"><strong class="text-purple">Impact:</strong>
+                  Localization is successful, but multi-country logistics increase overhead costs.</div>
+                <div class="col-md-4 text-light-gray border-md-start"><strong
+                    class="text-purple">Recommendation:</strong> Centralize a Regional Distribution Hub to consolidate
+                  cross-border supply chains.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECCIÓN 4: ACTIONABLE INSIGHTS ────────────────────────────────────── -->
+    <section class="mb-5">
+      <h2 class="exotic-heading mb-3"><span class="text-gradient">Actionable Insights</span></h2>
+      <ul class="insight-list">
+        <li>Wholesale (Mayorista) is the top segment with ~$8.45B, while Corporate and Government are very close
+          (~$8.43B), showing a balanced revenue mix.</li>
+        <li>The top products are Tea, Cookies, and Yogurt (~$2.83B each), so cross-category bundles across beverages and
+          snacks can significantly lift the average ticket.</li>
+        <li>Sales are evenly distributed across Brazil, Colombia, and Mexico — this supports investment in a regional
+          logistics hub to reduce per-unit shipping costs.</li>
+      </ul>
+    </section>
+
+    <!-- ── SECCIÓN 5: GALERÍA ─────────────────────────────────────────────────── -->
+    <section class="pb-5" id="dashboards">
+      <h2 class="exotic-heading mb-4"><span class="text-gradient">Visual Intelligence Gallery</span></h2>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="photo-frame" onclick="openModal(this)">
+            <div class="frame-inner">
+              <img src="../dashboards/Dashboard.png" alt="Executive Summary Dashboard">
+              <div class="frame-label">Executive Performance Overview</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="photo-frame" onclick="openModal(this)">
+            <div class="frame-inner">
+              <img src="../dashboards/Top5.png" alt="Top Performers">
+              <div class="frame-label">Ranking: Products &amp; Clients</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="photo-frame" onclick="openModal(this)">
+            <div class="frame-inner">
+              <img src="../dashboards/Tendencia temporal.png" alt="Trend Analysis">
+              <div class="frame-label">Temporal Sales Trend</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="photo-frame" onclick="openModal(this)">
+            <div class="frame-inner">
+              <img src="../dashboards/Participación por categoía.png" alt="Participation">
+              <div class="frame-label">Market Share by Category</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL LIGHTBOX -->
+  <div id="imageModal" class="modal-overlay" onclick="closeModal()">
+    <span class="close-btn">&times;</span>
+    <img class="modal-img" id="fullImage">
+    <div id="caption"></div>
+  </div>
+
+  <footer class="footer py-5 mt-5">
+    <div class="container text-center">
+      <p class="mb-0 fw-bold exotic-text">KEINER LARA</p>
+      <p class="small text-muted mb-0">Data Analyst · SENA 2026 · Riwi Analytics Track</p>
+      <p class="small mt-2"><a href="https://github.com/keiner-lara/Prueba-Empleabilidad-Analitica-SENA" target="_blank" style="color:#00d2ff;text-decoration:none;"><i class="bi bi-github me-1"></i>github.com/keiner-lara</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // ── CHART.JS — TOP 5 PRODUCTOS ──────────────────────────────────────────────
+    const ctx = document.getElementById('top5Chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Té', 'Galletas', 'Yogurt', 'Gaseosa', 'Mantequilla'],
+        datasets: [{
+          label: 'Total Ventas (Billones USD)',
+          data: [2.83, 2.83, 2.83, 2.82, 2.82],
+          backgroundColor: [
+            'rgba(0, 210, 255, 0.75)',
+            'rgba(0, 255, 136, 0.75)',
+            'rgba(189, 0, 255, 0.75)',
+            'rgba(255, 140, 0, 0.75)',
+            'rgba(255, 82, 82, 0.75)',
+          ],
+          borderColor: [
+            '#00d2ff', '#00ff88', '#bd00ff', '#ff8c00', '#ff5252'
+          ],
+          borderWidth: 2,
+          borderRadius: 8,
+          borderSkipped: false,
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        animation: { duration: 1200, easing: 'easeOutQuart' },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+            borderColor: 'rgba(255,255,255,0.1)',
+            borderWidth: 1,
+            titleColor: '#e2e8f0',
+            bodyColor: '#94a3b8',
+            callbacks: {
+              label: ctx => ` $${ctx.raw}B en ventas totales`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(255,255,255,0.04)' },
+            ticks: {
+              color: '#94a3b8',
+              callback: v => `$${v}B`
+            }
+          },
+          y: {
+            grid: { display: false },
+            ticks: { color: '#e2e8f0', font: { weight: '600' } }
+          }
+        }
+      }
+    });
+
+    // ── MODAL LIGHTBOX ──────────────────────────────────────────────────────────
+    function openModal(card) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('fullImage');
+      const captionText = document.getElementById('caption');
+      modal.style.display = 'flex';
+      modalImg.src = card.querySelector('img').src;
+      captionText.innerHTML = card.querySelector('.frame-label').innerText;
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+
+</body>
+
+</html>

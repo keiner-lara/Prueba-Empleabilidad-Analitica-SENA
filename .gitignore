@@ -1,0 +1,46 @@
+# ─── Credenciales y configuración sensible ───────────────────────────────────
+.env
+*.env.local
+
+# ─── Datos crudos (superan límite de GitHub 100MB) ───────────────────────────
+Datos.csv
+Datos_limpio.csv
+*.csv
+
+# ─── Archivos temporales / internos de trabajo ───────────────────────────────
+_extracted_assessment.txt
+_extracted_insights.txt
+_extracted_norma95.txt
+_extracted_norma96.txt
+_extracted*.txt
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ─── Jupyter Notebooks ───────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ─── Entornos de Python ──────────────────────────────────────────────────────
+Pipfile.lock
+
+# ─── VS Code ─────────────────────────────────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ─── Sistema operativo ───────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Archivos grandes de Power BI (opcional: comenta si quieres subirlo) ─────
+# *.pbix

@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Modelo_ER">
+    <mxGraphModel dx="1040" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="dim_fecha&#xa;id_fecha (PK)&#xa;fecha&#xa;year&#xa;month&#xa;year_month" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="dim_producto&#xa;id_producto (PK)&#xa;producto&#xa;tipo_producto" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="200" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="dim_region&#xa;id_region (PK)&#xa;ciudad&#xa;pais" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="dim_cliente&#xa;id_cliente (PK)&#xa;tipo_cliente&#xa;segmento_cliente&#xa;tipo_venta&#xa;id_region (FK)" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="360" width="240" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="fact_ventas&#xa;id_venta (PK)&#xa;id_fecha (FK)&#xa;id_producto (FK)&#xa;id_cliente (FK)&#xa;cantidad&#xa;precio_unitario&#xa;descuento&#xa;costo_envio&#xa;total" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="80" width="260" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" style="endArrow=block;html=1;" edge="1" parent="1" source="6" target="2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" style="endArrow=block;html=1;" edge="1" parent="1" source="6" target="3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" style="endArrow=block;html=1;" edge="1" parent="1" source="6" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" style="endArrow=block;html=1;" edge="1" parent="1" source="5" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

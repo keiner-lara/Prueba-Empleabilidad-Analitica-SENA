@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="UML_Componentes">
+    <mxGraphModel dx="1040" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Ingesta&#xa;Datos.csv" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="ETL&#xa;limpieza.py" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="280" y="120" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="DB Analitica&#xa;PostgreSQL" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="500" y="120" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="Power BI" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="720" y="80" width="140" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="Portal Web&#xa;HTML/CSS" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="720" y="180" width="140" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" style="endArrow=block;html=1;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" style="endArrow=block;html=1;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" style="endArrow=block;html=1;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" style="endArrow=block;html=1;" edge="1" parent="1" source="4" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
