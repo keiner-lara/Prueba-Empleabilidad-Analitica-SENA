@@ -27,3 +27,5 @@ Flujo de eventos:
 ![Diagrama de Secuencia](diagrams/uml_Diagrama_De_Secuencia.png)
 
 > Nota: Estos diagramas se pueden elaborar en Draw.io o Lucidchart.
+---
+[🚀 Ver App en Vivo](https://prueba-empleabilidad-analitica-sena-ayrc61pon.vercel.app/) | [📘 Manual de Usuario](file:///normas/Manual%20de%20usuario.docx)
