@@ -54,12 +54,14 @@ Prueba-Empleabilidad-Analitica-SENA/
 │   ├── modelo_datos.md
 │   ├── prototipo.md
 │   ├── uml.md
-│   ├── diagrams/       # UML PNGs (casos_uso, componentes, actividad, ER)
+│   ├── diagrams/       # UML PNGs (Casos de Uso, Clases, Secuencia, ModeloER)
 │   └── wireframes/     # Portal wireframes (inicio, top5, insights)
 │
 └── normas/                             # SENA certification documents
-    ├── NORMA_220501095_Diseno_KL.docx
-    ├── NORMA_220501096_Desarrollo_KL.docx
+    ├── Documento de diseño de software.docx
+    ├── Diagramas de Lenguaje Unificado de Modelado (UML).docx
+    ├── Prototipo de solución de software.docx
+    ├── Modelo de base de datos.docx
     ├── PRODUCTO NORMA 220501095 Diseñar...pdf
     ├── PRODUCTO NORMA 220501096 Desarrollar...pdf
     ├── Assessment Técnico — Enunciado.pdf

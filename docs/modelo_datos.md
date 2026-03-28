@@ -16,6 +16,6 @@
 - `fact_ventas.id_cliente` → `dim_cliente.id_cliente`
 - `dim_cliente.id_region` → `dim_region.id_region`
 
-![Modelo ER](diagrams/modelo_er.png)
+![Modelo ER](diagrams/uml_ModeloER.png)
 
 > Este diagrama puede elaborarse en Draw.io o similares.
