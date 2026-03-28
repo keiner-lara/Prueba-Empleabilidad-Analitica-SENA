@@ -14,11 +14,45 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    .custom-nav-link { transition: color 0.3s ease; font-size: 0.95rem; }
+    .custom-nav-link:hover { color: #00d2ff !important; text-shadow: 0 0 10px rgba(0,210,255,0.4); }
+    .text-blue { color: #00d2ff; }
+  </style>
 </head>
 
 <body>
 
   <div class="bg-glow"></div>
+
+  <!-- FIXED FLOATING NAVBAR FOR NAVIGATION (SENA REQUIREMENT) -->
+  <nav class="navbar navbar-expand-lg fixed-top px-4 py-3" style="background: rgba(10, 15, 28, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); z-index: 1030;">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white fs-5" href="#" style="font-family: 'Montserrat', sans-serif;">
+        <i class="bi bi-bar-chart-fill text-blue me-2"></i>Riwi<span class="text-gradient">Analytics</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navPortal">
+        <i class="bi bi-list text-white fs-3"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navPortal">
+        <ul class="navbar-nav gap-4">
+          <li class="nav-item">
+            <a class="nav-link text-light-gray fw-semibold custom-nav-link" href="#kpis">KPIs Globales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light-gray fw-semibold custom-nav-link" href="#top5">Top Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light-gray fw-semibold custom-nav-link" href="#insights">Hallazgos Estratégicos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light-gray fw-semibold custom-nav-link" href="#dashboards">Galería Visual</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <header class="hero-section text-center">
     <div class="container">
