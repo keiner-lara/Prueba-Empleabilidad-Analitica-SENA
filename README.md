@@ -8,7 +8,7 @@ This repository contains a comprehensive technical solution for data analytics a
 
 ---
 
-### [🚀 Ver Aplicación en Vivo (Vercel)](https://prueba-empleabilidad-analitica-sena-ayrc61pon.vercel.app/)
+### [View Live Application (Vercel)](https://prueba-empleabilidad-analitica-sena-ayrc61pon.vercel.app/)
 
 ---
 
@@ -101,13 +101,13 @@ The `limpieza.py` and `conexion_carga_datos.py` scripts automate:
 
 ## 5. Visual Intelligence & Insights
 
-La solución incluye un portal interactivo donde se pueden visualizar los KPIs globales y hallazgos estratégicos:
+The solution includes an interactive portal where global KPIs and strategic findings can be viewed:
 
 - **Total Sales**: 33.83B
 - **Average Ticket**: 17.34K
 - **Units Sold**: 10.73M
 
-[Ver todos los Insights en el Portal](https://prueba-empleabilidad-analitica-sena-ayrc61pon.vercel.app/)
+[View all Insights in the Portal](https://prueba-empleabilidad-analitica-sena-ayrc61pon.vercel.app/)
 
 ---
 
@@ -127,7 +127,7 @@ La solución incluye un portal interactivo donde se pueden visualizar los KPIs g
 
 ## Assessment Details
 
-- **Program**: Desarrollo de software (SENA)
+- **Program**: Software development (SENA)
 - **Author**: Keiner Lara
 - **GitHub**: [keiner-lara](https://github.com/keiner-lara)
 - **Date**: 2026
